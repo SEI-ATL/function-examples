@@ -97,10 +97,10 @@ function twoSum(numbers) {
     for (let i = 0; i < numbers.length; i++) {
         let numElement = numbers[i];
         let difference = 2020 - numElement;
-        console.log('numElement >', numElement);
-        console.log('difference >', difference);
+        console.log('numElement =>', numElement);
+        console.log('difference =>', difference);
         if (numberSet.has(difference)) {
-            console.log('winner >', numElement * difference);
+            console.log('winner =>', numElement * difference);
             return numElement * difference;
         }
         numberSet.add(numElement);
