@@ -86,3 +86,25 @@ let canFly = false;
 // can't mutate with const
 const likeChange = true;
 
+// twoSum function to where you find the numbers that will equal 2020 using set to get the algorithm to run in 
+// - Time Complexity: O(n)
+// - Space Complexity: O(n)
+
+const array = [19911, 17891, 990, 167, 198178, 1853, 198198, 10516];
+
+function twoSum(numbers) {
+    let numberSet = new Set();
+    for (let i = 0; i < numbers.length; i++) {
+        let numElement = numbers[i];
+        let difference = 2020 - numElement;
+        console.log('numElement >', numElement);
+        console.log('difference >', difference);
+        if (numberSet.has(difference)) {
+            console.log('winner >', numElement * difference);
+            return numElement * difference;
+        }
+        numberSet.add(numElement);
+    }
+}
+
+console.log(twoSum(array));
